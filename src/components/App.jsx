@@ -12,18 +12,6 @@ export const App = () => {
   const [bad, setBad] = useState(0);
 
   const keysState = ['good', 'neutral', 'bad'];
-  // const handleIncrement = option => {
-  //   setState(prevState => {
-  //     return {
-  //       [option]: prevState[option] + 1,
-  //     };
-  //   });
-  // };
-  // const keys = {
-  //   good: good,
-  //   neutral: neutral,
-  //   bad: bad,
-  // };
 
   // функція яка в FeedbackOptions буде приймати вибрану назву і в App змінювати окремий state
   const handleIncrement = option => {
@@ -44,7 +32,6 @@ export const App = () => {
     return ((good / (good + neutral + bad)) * 100).toFixed(0);
   };
 
-  // const started = handleIncrement(set);
   return (
     <Layout>
       <Section title={'Please leave feedback'}>
