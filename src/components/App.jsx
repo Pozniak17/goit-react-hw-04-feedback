@@ -11,7 +11,7 @@ export const App = () => {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
-  const keysState = ['good', 'neutral', 'bad'];
+  // const keysState = ['good', 'neutral', 'bad'];
 
   // функція яка в FeedbackOptions буде приймати вибрану назву і в App змінювати окремий state
   const handleIncrement = option => {
@@ -36,7 +36,7 @@ export const App = () => {
     <Layout>
       <Section title={'Please leave feedback'}>
         <FeedbackOptions
-          options={keysState}
+          options={Object.keys({ good, neutral, bad })}
           onLeaveFeedback={handleIncrement}
         />
       </Section>
